@@ -1,10 +1,10 @@
 # cublasgemm-benchmark
 
-A simple, repeatable benchmark for validating the GPU performance over time based on cublas matrix multiplication.
+A simple and repeatable benchmark for validating the GPU performance based on cublas matrix multiplication.
 
 ##How to run
 
-Make sure your CUDA tool kit is setup (Your `nvcc` is on `$PATH`, shared libraries on `$LD_LIBRARY_PATH`, headers on `$CPATH`). Then excute the following command to start the test:
+Make sure your CUDA tool kit is setup (Your `nvcc` is on `$PATH`, shared libraries on `$LD_LIBRARY_PATH`, headers on `$CPATH`). Then execute the following command to start the test:
 
 ```shell
 $ ./run.sh
@@ -22,6 +22,8 @@ Uncomment line 11 in `gemm.cu` and line 4 in `run.sh` to test float16 matrix mul
 
 An example testing result can be found in [here](https://github.com/hma02/cublasgemm-benchmark/blob/master/example/output.txt).
 
+The "pstate" ranges from P0 to P12 where P0 is the maximum performance and P12 is the minimum performance.
+
 ## See also
 
 * [Mixed-Precision Programming with CUDA 8](https://devblogs.nvidia.com/parallelforall/mixed-precision-programming-cuda-8/)
@@ -30,3 +32,4 @@ An example testing result can be found in [here](https://github.com/hma02/cublas
 * [Why cublasHgemm is slower](https://devtalk.nvidia.com/default/topic/972337/gpu-accelerated-libraries/why-cublashgemm-is-slower-more-than-cublassgemm-when-i-use-/)
 * [BLAS Interface for Different Precision](http://www.netlib.org/utk/people/JackDongarra/WEB-PAGES/Batched-BLAS-2016/Day1/precision-blas.pdf)
 * [OpenAI gemm](https://github.com/openai/openai-gemm)
+* [Useful nvidia-smi Queries](http://nvidia.custhelp.com/app/answers/detail/a_id/3751/~/useful-nvidia-smi-queries)
