@@ -31,6 +31,8 @@
 // 
 // It is recommended to use the more robust versions in production code.
 
+// code from: https://github.com/parallel-forall/code-samples/tree/master/posts/mixed-precision
+
 typedef unsigned uint;
 
 union FP32
