@@ -1,0 +1,288 @@
+nvcc gemm.cu -lcublas --std=c++11 -arch=sm_60  -o gemm
+INFO: Running test for all 4 GPU deivce(s) on host SOE-IBM2
+
+==================
+INFO: testing GPU0
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:35:06.040, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:11.043, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:16.044, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:21.045, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:26.046, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:31.048, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:36.049, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:41.050, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1480 MHz, 1480 MHz
+
+cublasSgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float32: size 2 average: 0.000484976 s
+float32: size 4 average: 2.9472e-05 s
+float32: size 8 average: 2.3648e-05 s
+float32: size 16 average: 2.3152e-05 s
+float32: size 32 average: 0.000285648 s
+float32: size 64 average: 3.0256e-05 s
+float32: size 128 average: 0.000184832 s
+float32: size 256 average: 6.3728e-05 s
+float32: size 512 average: 9.4288e-05 s
+float32: size 1024 average: 0.000347744 s
+float32: size 2048 average: 0.00195464 s
+float32: size 4096 average: 0.0146126 s
+float32: size 8192 average: 0.110208 s
+float32: size 16384 average: 0.878665 s
+
+==================
+INFO: testing GPU1
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:35:44.544, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:49.547, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:54.549, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:35:59.550, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:04.551, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:09.553, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:14.554, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:19.555, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1480 MHz, 1480 MHz
+
+cublasSgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float32: size 2 average: 6.2128e-05 s
+float32: size 4 average: 3.064e-05 s
+float32: size 8 average: 2.36e-05 s
+float32: size 16 average: 2.3104e-05 s
+float32: size 32 average: 3.4224e-05 s
+float32: size 64 average: 2.5616e-05 s
+float32: size 128 average: 5.4176e-05 s
+float32: size 256 average: 5.9312e-05 s
+float32: size 512 average: 9.0352e-05 s
+float32: size 1024 average: 0.0003492 s
+float32: size 2048 average: 0.00195917 s
+float32: size 4096 average: 0.0146308 s
+float32: size 8192 average: 0.110087 s
+float32: size 16384 average: 0.876652 s
+
+==================
+INFO: testing GPU2
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:36:22.924, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:27.927, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:32.928, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:37.930, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:42.931, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:47.932, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:52.933, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:36:57.934, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1480 MHz, 1480 MHz
+
+cublasSgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float32: size 2 average: 6.4224e-05 s
+float32: size 4 average: 3.256e-05 s
+float32: size 8 average: 2.3632e-05 s
+float32: size 16 average: 2.2544e-05 s
+float32: size 32 average: 3.4144e-05 s
+float32: size 64 average: 2.4704e-05 s
+float32: size 128 average: 5.6224e-05 s
+float32: size 256 average: 6.0192e-05 s
+float32: size 512 average: 9.3312e-05 s
+float32: size 1024 average: 0.000372464 s
+float32: size 2048 average: 0.00195994 s
+float32: size 4096 average: 0.0147309 s
+float32: size 8192 average: 0.110065 s
+float32: size 16384 average: 0.879872 s
+
+==================
+INFO: testing GPU3
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:37:01.288, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1290 MHz, 1480 MHz
+2017/03/26 19:37:06.292, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:37:11.293, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:37:16.294, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:37:21.295, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:37:26.296, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:37:31.297, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:37:36.298, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1468 MHz, 1480 MHz
+
+cublasSgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float32: size 2 average: 6.5744e-05 s
+float32: size 4 average: 3.24e-05 s
+float32: size 8 average: 2.3984e-05 s
+float32: size 16 average: 2.304e-05 s
+float32: size 32 average: 3.4864e-05 s
+float32: size 64 average: 2.5504e-05 s
+float32: size 128 average: 5.448e-05 s
+float32: size 256 average: 6.0128e-05 s
+float32: size 512 average: 9.2704e-05 s
+float32: size 1024 average: 0.00035224 s
+float32: size 2048 average: 0.00196624 s
+float32: size 4096 average: 0.0148319 s
+float32: size 8192 average: 0.11031 s
+float32: size 16384 average: 0.890208 s
+
+
+
+
+
+
+
+
+
+
+
+
+nvcc gemm.cu -lcublas --std=c++11 -arch=sm_60  -o gemm
+INFO: Running test for all 4 GPU deivce(s) on host SOE-IBM2
+
+==================
+INFO: testing GPU0
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:38:56.020, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:01.023, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:06.024, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:11.025, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:16.027, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:21.028, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:26.029, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:31.030, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:36.031, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:41.032, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:46.033, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:39:51.034, 0, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+
+cublasHgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float16: size 2 average: 0.000233648 s
+float16: size 4 average: 4.208e-05 s
+float16: size 8 average: 4.0256e-05 s
+float16: size 16 average: 3.6448e-05 s
+float16: size 32 average: 5.2016e-05 s
+float16: size 64 average: 5.2064e-05 s
+float16: size 128 average: 6.088e-05 s
+float16: size 256 average: 0.00012064 s
+float16: size 512 average: 0.000302464 s
+float16: size 1024 average: 0.000593392 s
+float16: size 2048 average: 0.0031229 s
+float16: size 4096 average: 0.0123712 s
+float16: size 8192 average: 0.0741925 s
+float16: size 16384 average: 0.487289 s
+
+==================
+INFO: testing GPU1
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:39:57.120, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:02.124, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:07.125, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:12.126, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:17.127, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:22.129, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:27.130, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:32.131, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:37.133, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:42.134, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:47.135, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:40:52.136, 1, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+
+cublasHgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float16: size 2 average: 0.000261472 s
+float16: size 4 average: 4.1824e-05 s
+float16: size 8 average: 3.9088e-05 s
+float16: size 16 average: 3.6352e-05 s
+float16: size 32 average: 4.856e-05 s
+float16: size 64 average: 5.232e-05 s
+float16: size 128 average: 5.5648e-05 s
+float16: size 256 average: 0.0001248 s
+float16: size 512 average: 0.000315568 s
+float16: size 1024 average: 0.000596128 s
+float16: size 2048 average: 0.00315067 s
+float16: size 4096 average: 0.012562 s
+float16: size 8192 average: 0.0750248 s
+float16: size 16384 average: 0.488811 s
+
+==================
+INFO: testing GPU2
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:40:58.208, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:03.212, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:08.213, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:13.214, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:18.215, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:23.217, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:28.219, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:33.220, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:38.221, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:43.222, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:48.223, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:41:53.225, 2, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+
+cublasHgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float16: size 2 average: 0.0002288 s
+float16: size 4 average: 3.7696e-05 s
+float16: size 8 average: 3.7888e-05 s
+float16: size 16 average: 3.5744e-05 s
+float16: size 32 average: 4.7712e-05 s
+float16: size 64 average: 5.0064e-05 s
+float16: size 128 average: 5.1136e-05 s
+float16: size 256 average: 0.00013504 s
+float16: size 512 average: 0.000348672 s
+float16: size 1024 average: 0.000624624 s
+float16: size 2048 average: 0.00284411 s
+float16: size 4096 average: 0.0129803 s
+float16: size 8192 average: 0.0765715 s
+float16: size 16384 average: 0.490336 s
+
+==================
+INFO: testing GPU3
+==================
+timestamp, index, name, pcie.link.gen.current, pcie.link.gen.max, pstate, clocks.current.graphics [MHz], clocks.max.graphics [MHz]
+2017/03/26 19:41:59.451, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1290 MHz, 1480 MHz
+2017/03/26 19:42:04.455, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:09.457, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:14.458, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:19.459, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:24.461, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:29.462, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:34.463, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:39.465, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:44.466, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:49.467, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+2017/03/26 19:42:54.468, 3, Tesla P100-SXM2-16GB, 3, 3, P0, 1328 MHz, 1480 MHz
+
+cublasHgemm test result:
+
+running with min_m_k_n: 2 max_m_k_n: 16384 repeats: 2
+allocating device variables
+float16: size 2 average: 0.000263632 s
+float16: size 4 average: 4.72e-05 s
+float16: size 8 average: 3.752e-05 s
+float16: size 16 average: 3.664e-05 s
+float16: size 32 average: 4.8624e-05 s
+float16: size 64 average: 5.0096e-05 s
+float16: size 128 average: 5.4416e-05 s
+float16: size 256 average: 0.000127104 s
+float16: size 512 average: 0.000318368 s
+float16: size 1024 average: 0.000638688 s
+float16: size 2048 average: 0.00330774 s
+float16: size 4096 average: 0.0122996 s
+float16: size 8192 average: 0.0750033 s
+float16: size 16384 average: 0.488594 s
