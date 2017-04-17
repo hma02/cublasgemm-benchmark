@@ -2,7 +2,7 @@
 
 A simple and repeatable benchmark for validating the GPU performance based on cublas matrix multiplication.
 
-##How to run
+## How to run
 
 Make sure your CUDA tool kit is setup (Your `nvcc` is on `$PATH`, shared libraries on `$LD_LIBRARY_PATH`, headers on `$CPATH`). Then execute the following command to start the test:
 
