@@ -21,13 +21,15 @@ function cublastest_on_GPU
 	done < cublastest.out
 }
 
-mapfile -t lines < <(nvidia-smi topo -m | grep "^GPU[0-9]\+")
-_SIZE=${#lines[@]} # shows the amount of available GPUs
+# mapfile -t lines < <(nvidia-smi topo -m | grep "^GPU[0-9]\+")
+# _SIZE=${#lines[@]} # shows the amount of available GPUs
+
+nvidia-smi topo -m | grep "^GPU[0-9]\+" > /tmp/topo.test
+
+_SIZE=$(wc -l < /tmp/topo.test)
 
 echo -e "${RED}INFO:${NC} Running test for all $_SIZE GPU deivce(s) on host $(hostname)"
 
-
-nvidia-smi topo -m | grep "^GPU[0-9]\+" > /tmp/topo.test
 COUNTER=0
 
 while read line  <&3; do
