@@ -25,11 +25,16 @@ mapfile -t lines < <(nvidia-smi topo -m | grep "^GPU[0-9]\+")
 _SIZE=${#lines[@]} # shows the amount of available GPUs
 
 echo -e "${RED}INFO:${NC} Running test for all $_SIZE GPU deivce(s) on host $(hostname)"
-for (( index=0; index<$_SIZE; index++ ))
-do
+
+
+nvidia-smi topo -m | grep "^GPU[0-9]\+" > /tmp/topo.test
+COUNTER=0
+
+while read line  <&3; do
 	echo                    
 	echo "=================="
-	echo -e "${RED}INFO:${NC} testing GPU$index"
+	echo -e "${RED}INFO:${NC} testing GPU$COUNTER"
 	echo "=================="
-	cublastest_on_GPU $index
-done
+	cublastest_on_GPU $COUNTER
+	let COUNTER=COUNTER+1 
+done 3< /tmp/topo.test
