@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// #define FP16MM
+#define FP16MM
 
 const char* cublasGetErrorString(cublasStatus_t status)
 {
